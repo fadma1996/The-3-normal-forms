@@ -1,0 +1,32 @@
+We have two structures, the first is Dependences, the second structure is Relation .
+There are three functions(3 normal forms):
+***FN1*** if we have a key in a relation then we say that this relation is in FN1.
+Example:
+R( A , B ,C ) is a relation , A is a key, so we say that R is in FN1.
+
+
+*****************
+***FN2*** we say that the reletion is in FN2 if :
+-The relation is in the FN1.
+-A part of a key don't determine another attribute.
+Example:
+R( A , B ,C ,D ) is a relation . The key of this reletion is AB.
+The functional dependencies are:
+
+AB ==> C
+B ==> D
+
+This relation is in FN1 because it has a key but it's not in FN2 because we have B ==> D (B is a part of a key.)
+
+*****************
+***FN3*** we say that the reletion is in FN3 if :
+-The relation is in the FN2.
+-We don't have a transitivity between functional dependencies.
+Example:
+R( A , B ,C ,D ) is a relation . The key of this reletion is AB.
+The functional dependencies are:
+
+AB ==> C
+C ==> D
+
+This relation is in FN1 because it has a key ,and it's in FN2 ,but it'is not in FN3 because we have a transitivity.
